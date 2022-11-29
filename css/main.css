@@ -389,7 +389,6 @@ img {
 @media screen and (max-width: 1200px) {
   .banner {
     position: relative;
-    overflow: hidden;
   }
   .banner__right {
     position: absolute;
