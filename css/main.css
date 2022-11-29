@@ -52,6 +52,7 @@ img {
 
 .site-haeder__nav {
   border-bottom: 1px solid rgba(70, 163, 88, 0.5019607843);
+  margin-bottom: 12px;
 }
 
 .nav {
@@ -91,11 +92,43 @@ img {
   border-bottom: 3px solid transparent;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 .nav__link:hover {
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.651);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.651);
+  padding: 15px 25px;
+  border-radius: 15px;
   border-bottom: 3px solid #46A358;
+  -webkit-animation-name: nav__link;
+          animation-name: nav__link;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
+@-webkit-keyframes nav__link {
+  0% {
+    -webkit-transform: rotateZ(0deg) rotateY(0deg);
+            transform: rotateZ(0deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) rotateY(360deg);
+            transform: rotateZ(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes nav__link {
+  0% {
+    -webkit-transform: rotateZ(0deg) rotateY(0deg);
+            transform: rotateZ(0deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) rotateY(360deg);
+            transform: rotateZ(360deg) rotateY(360deg);
+  }
+}
 .nav__icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,6 +242,12 @@ img {
   border: none;
   position: relative;
   cursor: pointer;
+  -webkit-animation-name: sHeader__btn;
+          animation-name: sHeader__btn;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-iteration-count: 0.8s;
+          animation-iteration-count: 0.8s;
 }
 .site-header__btn::after {
   content: "";
@@ -220,6 +259,27 @@ img {
           transform: translate(-50%, -50%);
 }
 
+@-webkit-keyframes sHeader__btn {
+  0% {
+    -webkit-transform: rotateZ(0deg) rotateY(0deg);
+            transform: rotateZ(0deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) rotateY(360deg);
+            transform: rotateZ(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes sHeader__btn {
+  0% {
+    -webkit-transform: rotateZ(0deg) rotateY(0deg);
+            transform: rotateZ(0deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) rotateY(360deg);
+            transform: rotateZ(360deg) rotateY(360deg);
+  }
+}
 @media screen and (max-width: 1200px) {
   .nav__links {
     gap: 0;

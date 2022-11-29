@@ -1,6 +1,7 @@
 .site-haeder__nav
 {
     border-bottom: 1px solid #46A35880;
+    margin-bottom: 12px;
 }
 .nav
 {
@@ -29,9 +30,30 @@
     padding: 25px;
     border-bottom: 3px solid transparent;
     transition: .3s;
+    cursor: pointer;
+    
     &:hover
     {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.651);
+        padding: 15px 25px;
+        border-radius: 15px;
         border-bottom: 3px solid #46A358;
+
+        animation-name: nav__link;
+        animation-duration: .8s;
+        animation-iteration-count: 1;
+    }
+}
+
+@keyframes nav__link
+{
+    0%
+    {
+        transform: rotateZ(0deg) rotateY(0deg);
+    }
+    100%
+    {
+        transform: rotateZ(360deg) rotateY(360deg);
     }
 }
 .nav__icon
@@ -139,6 +161,10 @@
     border: none;
     position: relative;
     cursor: pointer;
+    
+    animation-name: sHeader__btn;
+    animation-duration: .8s;
+    animation-iteration-count: .8s;
     &::after
     {
         content: "";
@@ -147,6 +173,17 @@
         position: absolute;
         background-image: url(../img/siteHeader-btnN.svg);
         transform: translate(-50%,-50%);
+    }
+}
+@keyframes sHeader__btn
+{
+    0%
+    {
+        transform: rotateZ(0deg) rotateY(0deg);
+    }
+    100%
+    {
+        transform: rotateZ(360deg) rotateY(360deg);
     }
 }
 
