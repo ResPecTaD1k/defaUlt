@@ -73,6 +73,7 @@
     .banner
     {
         position: relative;
+        overflow: hidden;
         
     }
     .banner__right
@@ -128,7 +129,7 @@
         width: 213px;
         height: 213px;
         top: 0px;
-        right: -50px;
+        right: -45px;
     }
     .banner__text
     {
