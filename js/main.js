@@ -107,21 +107,3 @@ elSelect.addEventListener("change", () => {
     }
   });
 });
-
-//dark-light
-
-let theme = "light";
-
-themeBtn.addEventListener("click", function () {
-  if (theme === "dark") {
-    themeBtn.textContent = "Dark";
-    elBody.className = "white-mode";
-    elText.className = "text-dark";
-    theme = "light";
-  } else {
-    themeBtn.textContent = "Light";
-    elBody.className = "dark-mode";
-    elText.className = "text-light";
-    theme = "dark";
-  }
-});
