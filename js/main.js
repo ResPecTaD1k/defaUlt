@@ -1,10 +1,11 @@
-let cinemaCatagoties = document.querySelector(".hero__catagories");
-let cinemaSearche = document.querySelector("#input-id");
-let selected = document.querySelector(".select__box");
-let cinemaTetx = document.querySelector(".hero__title");
+let elFilm = document.querySelector(".films-box");
+let elSearch = document.querySelector("#input-id");
+let elSelect = document.querySelector(".select-box");
+let elBody = document.querySelector(".body");
+let elText = document.querySelector(".hero-title");
 
 function renderFilms(kino) {
-  cinemaCatagoties.textContent = "";
+  elFilm.textContent = "";
 
   for (let i = 0; i < kino.length; i++) {
     let li = document.createElement("li");
@@ -47,7 +48,7 @@ function renderFilms(kino) {
     </div>
     </li>`;
 
-    cinemaCatagoties.appendChild(li);
+    elFilm.appendChild(li);
   }
 }
 
@@ -55,7 +56,7 @@ renderFilms(films);
 
 //delete
 
-cinemaCatagoties.addEventListener("click", function (evt) {
+elFilm.addEventListener("click", function (evt) {
   const element = evt.target;
   if (element.className.includes("delete-btn")) {
     const id = Number(element.dataset.id);
@@ -77,8 +78,8 @@ cinemaCatagoties.addEventListener("click", function (evt) {
 
 //search
 
-cinemaSearche.addEventListener("input", () => {
-  let value = cinemaSearche.value;
+elSearch.addEventListener("input", () => {
+  let value = elSearch.value;
   let searchArr = [];
 
   films.forEach((search) => {
@@ -91,7 +92,9 @@ cinemaSearche.addEventListener("input", () => {
 
 //select
 
-selected.addEventListener("change", cinemaTetx => {
+elSelect.addEventListener("change", () => {
+  let value = elSelect.value;
+  let all = [];
   let genres = [];
 
   films.forEach((janr) => {
@@ -103,4 +106,22 @@ selected.addEventListener("change", cinemaTetx => {
       renderFilms(all);
     }
   });
+});
+
+//dark-light
+
+let theme = "light";
+
+themeBtn.addEventListener("click", function () {
+  if (theme === "dark") {
+    themeBtn.textContent = "Dark";
+    elBody.className = "white-mode";
+    elText.className = "text-dark";
+    theme = "light";
+  } else {
+    themeBtn.textContent = "Light";
+    elBody.className = "dark-mode";
+    elText.className = "text-light";
+    theme = "dark";
+  }
 });
