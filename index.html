@@ -19,13 +19,16 @@
         <div class="container site-haeder__container">
             <nav class="site-haeder__nav nav">
                 <div class="site-header__logo">
-                    <a href="#"><img src="/img/site-header__logo.svg" alt="site logo"></a>
+                    <a href="#" class="site-header__logo-link">
+                        <img src="/img/free-icon.png" alt="site logo">
+                        <p class="logo__text">#Cinema</p>
+                    </a>
                 </div>
                 <ul class="nav__links">
-                    <li class="nav__link"><a href="/index.html">Home</a></li>
-                    <li class="nav__link"><a href="#">Shop</a></li>
-                    <li class="nav__link"><a href="#">Plant Care</a></li>
-                    <li class="nav__link"><a href="#">Blogs</a></li>
+                    <li id="home" class="nav__link"><a href="/index.html">Home</a></li>
+                    <li id="action" class="nav__link"><a href="#">Action</a></li>
+                    <li id="omedy" class="nav__link"><a href="#">Comedy</a></li>
+                    <li id="fantasy" class="nav__link"><a href="#">Fantasy</a></li>
                 </ul>
                 <div class="nav__icon">
                     <a href="#" class="nav_iconLink"></a>
@@ -46,20 +49,42 @@
 
     <main class="site-hero">
         <div class="container site-hero__container">
-            <section class="site-hero__banner banner">
-                <div class="banner__left">
-                    <p class="banner__text">Welcome to GreenShop</p>
-                    <h1 class="banner__title">Let’s Make a Better <span>Planet</span></h1>
-                    <p class="banner__text2">We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to create an unique Urban Jungle. Order your favorite plants!</p>
-                    <p class="banner__textMedia">We are an online plant shop offering a wide range </p>
-                    <a href="#"><button class="banner__btn">SHOP NOW</button></a>
-                </div>
-                <div class="banner__right">
-                    <img src="img/bannerLeftImg.svg" alt="flower picture">
-                </div>
-            </section>
+
+             <!-- CATAGORIES -->
+
+             <div class="site-hero__catagories catagories">
+                <section class="site-hero">
+                    <form id="form" class="form-control mt-5 p-2">
+                        <input id="input-id" class="form-control" placeholder="search" type="search" />
+                    </form>
+                    <select id="genres" class="select__box">
+                        <option value="All">All</option>
+                        <option value="Family">Family</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Action">Action</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Animation">Animation</option>
+                        <option value="opel">Documentary</option>
+                        <option value="Music">Music</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Science">Science Fiction</option>
+                        <option value="Romance">Romance</option>
+                        <option value="History">History</option>
+                        <option value="Horror">Horror</option>
+                    </select>
+            
+                    <ul class="hero__catagories"></ul>
+                </section>
+            </div>
+
         </div>
     </main>
+    <script src="./js/films.js"></script>
+    <script src="./js/main.js"></script>
+
 </body>
 
 </html>

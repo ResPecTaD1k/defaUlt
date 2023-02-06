@@ -11,9 +11,21 @@
 }
 .site-header__logo
 {
-    width: 150px;
-    height: 34px;
+    width: 35px;
+    height: 35px;
     background-repeat: no-repeat;
+}
+.site-header__logo-link
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.logo__text
+{
+    font-size: 30px;
+    color: black;
 }
 .nav__links
 {

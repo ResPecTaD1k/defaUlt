@@ -1,0 +1,47 @@
+.catagories
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 68px 40px;
+    background: linear-gradient(to bottom, gray,black);
+    color: white;
+}
+.catagories__item
+{
+    width: 245px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.667);
+    &:hover
+    {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.667);
+    }
+}
+.catagories__img
+{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.catagories__title
+{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.catagories__gender
+{
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+.catagories__date
+{
+    margin-bottom: 5px;
+}
