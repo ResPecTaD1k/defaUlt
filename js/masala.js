@@ -1,16 +1,16 @@
 
 // task 1   task 1   task 1   task 1   task 1   task 1   task 1   task 1   task 1   task 1   
 
-// function year(num) {
-//     if ((num % 4 == 0 && num % 100 != 0) || num % 400 == 0) {
-//       return "Bu kabisa yili";
-//     }
-//     return "Bu kabisa yili emas";
-//   }
+function year(num) {
+    if ((num % 4 == 0 && num % 100 != 0) || num % 400 == 0) {
+      return "Bu kabisa yili";
+    }
+    return "Bu kabisa yili emas";
+  }
 
-//   let kabiseYear = +prompt('enter Kabisa year...')
+  let kabiseYear = +prompt('enter Kabisa year...')
 
-//   console.log(year(kabiseYear));
+  console.log(year(kabiseYear));
   
 //   task 2     task 2     task 2     task 2     task 2     task 2     task 2     task 2     task 2     task 2     
 
